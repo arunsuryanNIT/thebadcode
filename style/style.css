@@ -1,0 +1,151 @@
+
+/* Designing Navbar*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F6F6F6;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #101820;
+    height: 75px;
+
+}
+
+header * {
+    color: #FEE715FF;
+}
+
+header .logo {
+    float: left;
+    height: inherit;
+    margin-left: 2em;
+}
+
+header .code-logo {
+    color: #FF634D;
+    margin-left: 5px;
+}
+
+header .logo-text {
+    font-family: 'Baloo Tamma 2', cursive;
+    margin:10px;
+}
+
+header .logo-text span {
+    color: white;
+}
+
+header ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header ul li {
+    float: left;
+    position: relative;
+}
+
+header ul li ul {
+    position: absolute;
+    top: 75px;
+    width: 150px;
+    display: none;
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+header ul li ul li{
+    width: 100%;
+}
+
+header ul li ul li a{
+    padding: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    color: gray;
+    background-color: white;
+}
+
+header ul li ul li a:hover {
+    background: #2f4351
+}
+
+header ul li a {
+    display: block;
+    padding: 21px;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: 'Dosis', sans-serif;
+}
+
+header ul li a:hover {
+    background: #2f4351;
+    transition: 0.5s;
+}
+
+header .menu-toggle {
+    display: none;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 750px) {
+    header {
+        position: relative;
+    }
+    .showing {
+        max-height: 100em;
+    }
+    header ul {
+        width: 100%;
+        background: #101820;
+        max-height: 0; /* So that it becomes invisible it results in overflow*/
+        overflow: hidden; /* Hide overflow */
+    }
+
+    header ul li {
+        width: 100%;
+    }
+
+    header ul li ul {
+        position: static;
+        display: none;
+        width: 100%;
+    }
+
+    header ul li:hover ul {
+        display: block;
+    }
+
+    header ul li ul li a{
+        background: #101820;
+        padding-left: 50px;
+        font-family: 'Merriweather', serif;
+        color: gray;
+    }
+
+    header .menu-toggle {
+        position: absolute;
+        display: block;
+        right: 20px;
+        top: 20px;
+        font-size: 2em;
+    }
+    header .logo {
+        float: left;
+        margin-left: 5px;
+    }
+}
+
+
