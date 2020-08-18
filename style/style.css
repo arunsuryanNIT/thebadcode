@@ -145,6 +145,7 @@ header .menu-toggle {
     header .logo {
         float: left;
         margin-left: 5px;
+        margin-top: 4px;
     }
 }
 
